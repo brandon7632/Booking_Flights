@@ -1,0 +1,214 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="UserForm" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="formattedDate" Type="OutArgument(x:String)" />
+    <x:Property Name="chosen_departure" Type="OutArgument(x:String)" />
+    <x:Property Name="chosen_arrival" Type="OutArgument(x:String)" />
+    <x:Property Name="email" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>860,1258</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>UserForm_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Globalization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="UserForm" sap:VirtualizedContainerService.HintSize="550,1193" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[New list(Of String) From &#xA;{&quot;New York&quot;, &quot;Los Angeles&quot;, &quot;Chicago&quot;, &quot;Houston&quot;, &quot;Phoenix&quot;, &quot;Philadelphia&quot;,&#xA;&quot;San Antonio&quot;, &quot;San Diego&quot;, &quot;Dallas&quot;, &quot;San Jose&quot;, &quot;Atlanta&quot;, &quot;Denver&quot;, &quot;San Francisco&quot;,&#xA;&quot;Seattle&quot;, &quot;Miami&quot;, &quot;Orlando&quot;, &quot;Charlotte&quot;, &quot;Minneapolis&quot;, &quot;Boston&quot;, &quot;Las Vegas&quot;, &quot;Detroit&quot;,&#xA;&quot;Baltimore&quot;, &quot;Washington DC&quot;, &quot;Salt Lake City&quot;, &quot;Portland&quot;, &quot;Tampa&quot;, &quot;St. Louis&quot;, &quot;Honolulu&quot;,&#xA;&quot;Fort Lauderdale&quot;, &quot;Nashville&quot;, &quot;Oakland&quot;, &quot;Kansas City&quot;, &quot;New Orleans&quot;, &quot;Cleveland&quot;, &quot;Sacramento&quot;,&#xA;&quot;Pittsburgh&quot;, &quot;Raleigh&quot;, &quot;Austin&quot;, &quot;Indianapolis&quot;, &quot;Cincinnati&quot;, &quot;Milwaukee&quot;, &quot;Memphis&quot;, &quot;San Juan&quot;,&#xA;&quot;Anchorage&quot;, &quot;Albuquerque&quot;, &quot;Omaha&quot;, &quot;Richmond&quot;, &quot;Tulsa&quot;, &quot;Oklahoma City&quot;, &quot;Jacksonville&quot;, &quot;Columbus&quot;,&#xA;&quot;El Paso&quot;, &quot;Buffalo&quot;, &quot;Providence&quot;, &quot;Louisville&quot;, &quot;Burbank&quot;, &quot;Reno&quot;, &quot;Tucson&quot;, &quot;Spokane&quot;, &quot;Santa Ana&quot;, &quot;Ontario&quot;,&#xA;&quot;West Palm Beach&quot;, &quot;Rochester&quot;, &quot;Sarasota&quot;, &quot;Norfolk&quot;, &quot;Boise&quot;, &quot;Des Moines&quot;, &quot;Madison&quot;, &quot;Grand Rapids&quot;,&#xA;&quot;Birmingham&quot;, &quot;Charleston&quot;, &quot;Fresno&quot;}]" Name="cities" />
+      <Variable x:TypeArguments="x:String" Name="form_choices" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="regEx_choice" />
+      <Variable x:TypeArguments="x:String" Name="chosen_date" />
+      <Variable x:TypeArguments="s:DateTime" Name="parsedDate" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" Dismissed="{x:Null}" FormFieldsInputData="{x:Null}" FormTitle="{x:Null}" IconPath="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="c1550784-f3e3-4854-b482-65e70e5d58dd" DisableMaximizeButton="False" DisableMinimizeButton="False" DisableSanitize="False" DisplayName="Flight info form" FormFieldsOutputData="[form_choices]" FormHeight="800" FormSchema="%[{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;Submit&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;tableView&quot;:false},{&quot;label&quot;:&quot;Where From?&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;departing_city&quot;,&quot;type&quot;:&quot;select&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Where To?&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;arrival_city&quot;,&quot;type&quot;:&quot;select&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Day&quot;,&quot;hideInputLabels&quot;:false,&quot;inputsLabelPosition&quot;:&quot;top&quot;,&quot;tableView&quot;:false,&quot;fields&quot;:{&quot;day&quot;:{&quot;type&quot;:&quot;select&quot;,&quot;hide&quot;:false,&quot;required&quot;:true},&quot;month&quot;:{&quot;hide&quot;:false,&quot;required&quot;:true},&quot;year&quot;:{&quot;type&quot;:&quot;select&quot;,&quot;hide&quot;:false,&quot;required&quot;:true,&quot;minYear&quot;:2023,&quot;maxYear&quot;:2026}},&quot;maxDate&quot;:&quot;moment().add(180,'days')&quot;,&quot;minDate&quot;:&quot;moment().subtract(0,'days')&quot;,&quot;key&quot;:&quot;day&quot;,&quot;type&quot;:&quot;day&quot;,&quot;input&quot;:true,&quot;minYear&quot;:2023,&quot;maxYear&quot;:2026},{&quot;label&quot;:&quot;Email Address:&quot;,&quot;tableView&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;emailAddress&quot;,&quot;type&quot;:&quot;email&quot;,&quot;input&quot;:true}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="800" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="488,487" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False" StartAsMinimized="False">
+      <ufa:FormActivity.Body>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Sequence sap2010:Annotation.AnnotationText="&quot;departing_city&quot;:&quot;: Matches the literal string &quot;departing_city&quot;:&quot;.&#xA;(?&lt;DepartingCity&gt;[^&quot;]+): This is a named capture group that captures the value for the departing city.&#xA;&#xA;&quot;,&quot;arrival_city&quot;:&quot;: Matches the literal string &quot;,&quot;arrival_city&quot;:&quot;.&#xA;(?&lt;ArrivalCity&gt;[^&quot;]+): Another named capture group&#xA;&quot;day&quot;:&quot; is the literal string to find the beginning of the day field.&#xA;&#xA;(?&lt;Day&gt;[^&quot;]+):  Another named capture group" DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,360" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Matches FirstMatch="{x:Null}" sap2010:Annotation.AnnotationText="Seperates the departing city, arriving city, date &amp; email. inputted by the user form,using a regex." BuilderPattern="&quot;departing_city&quot;:&quot;(?&lt;DepartingCity&gt;[^&quot;]+)&quot;,&quot;arrival_city&quot;:&quot;(?&lt;ArrivalCity&gt;[^&quot;]+)&quot;,&quot;day&quot;:&quot;(?&lt;day&gt;[^&quot;]+)&quot;,&quot;emailAddress&quot;:&quot;(?&lt;EmailAddress&gt;[^&quot;]+)&quot;" DisplayName="Find departing/arriving city" sap:VirtualizedContainerService.HintSize="388,102" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[form_choices]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\&quot;departing_city\&quot;:\&quot;(?&lt;DepartingCity&gt;[^\&quot;]+)\&quot;,\&quot;arrival_city\&quot;:\&quot;(?&lt;ArrivalCity&gt;[^\&quot;]+)\&quot;,\&quot;day\&quot;:\&quot;(?&lt;day&gt;[^\&quot;]+)\&quot;,\&quot;emailAddress\&quot;:\&quot;(?&lt;EmailAddress&gt;[^\&quot;]+)\&quot;&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="&quot;departing_city&quot;:&quot;(?&lt;DepartingCity&gt;[^&quot;]+)&quot;,&quot;arrival_city&quot;:&quot;(?&lt;ArrivalCity&gt;[^&quot;]+)&quot;,&quot;day&quot;:&quot;(?&lt;day&gt;[^&quot;]+)&quot;,&quot;emailAddress&quot;:&quot;(?&lt;EmailAddress&gt;[^&quot;]+)&quot;" RegexOption="IgnoreCase, Compiled" Result="[regEx_choice]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:Matches>
+          </Sequence>
+        </ActivityAction>
+      </ufa:FormActivity.Body>
+      <ufa:FormActivity.DelayBody>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Delay Duration="00:00:00.2500000" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        </ActivityAction>
+      </ufa:FormActivity.DelayBody>
+      <ufa:FormActivity.FormFieldsCollection>
+        <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="departing_city_dropdown">[cities]</InOutArgument>
+        <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="arrival_city_dropdown">[cities]</InOutArgument>
+      </ufa:FormActivity.FormFieldsCollection>
+    </ufa:FormActivity>
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Using name caputuring groups to further capture our desired data.&#xD;&#xA;- regex_choice = a collection list&#xD;&#xA;- '(0)' = accesses the first match in the collection.&#xD;&#xA;- Groups(&quot;departingcity&quot;) = the group we wish to access(assigned by our regex above.&#xD;&#xA;- value = retrives the string captured by that group.&#xD;&#xA; &#xD;&#xA;These arguments are then sent back to the main." DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="488,326" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[chosen_departure]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[regex_choice(0).Groups("DepartingCity").Value]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[chosen_arrival]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[regex_choice(0).Groups("ArrivalCity").Value]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[chosen_date]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[regex_choice(0).Groups("day").Value]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[email]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[regex_choice(0).Groups("EmailAddress").Value]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Formatts the date from '10/15/2023' to Oct 15, 2023, becuase this is the required format for the web page. Sends  the data as argumetns back to main." DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="488,189" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s:DateTime">[parseddate]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(chosen_date, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[formattedDate]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[parsedDate.ToString("MMM d, yyyy")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+  </Sequence>
+</Activity>

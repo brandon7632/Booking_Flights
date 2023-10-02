@@ -1,0 +1,39 @@
+Airline name: Frontier Airlines
+Departure time: 10:50pm
+Arrival time: 1:23am
+departure location: New York
+arrival location: Atlanta
+cost: $39
+
+
+Airline name: Spirit Airlines
+Departure time: 10:14pm
+Arrival time: 12:45am
+departure location: Newark
+arrival location: Atlanta
+cost: $43
+
+
+Airline name: Frontier Airlines
+Departure time: 10:54am
+Arrival time: 1:32pm
+departure location: New York
+arrival location: Atlanta
+cost: $44
+
+
+Airline name: Spirit Airlines
+Departure time: 9:59am
+Arrival time: 7:24pm
+departure location: New York
+arrival location: Atlanta
+cost: $49
+
+
+Airline name: Spirit Airlines
+Departure time: 9:59am
+Arrival time: 9:20pm
+departure location: New York
+arrival location: Atlanta
+cost: $49
+

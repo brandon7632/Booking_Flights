@@ -1,0 +1,527 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>860,3599</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="This Project opens a form to allow the user to input the required flight details. Then inputs that information into Expedia.&#xA;The results are then stored and emailed to the user." DisplayName="Booking flights on Expedia" sap:VirtualizedContainerService.HintSize="650,3534" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="SelectedDate" />
+      <Variable x:TypeArguments="x:String" Name="in_formattedDate" />
+      <Variable x:TypeArguments="x:String" Name="in_chosen_departure" />
+      <Variable x:TypeArguments="x:String" Name="in_chosen_arrival" />
+      <Variable x:TypeArguments="x:String" Name="airline_name" />
+      <Variable x:TypeArguments="x:String" Name="departure_time" />
+      <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="x:String" Name="airline_name_info" />
+      <Variable x:TypeArguments="x:String" Name="departure_time_info" />
+      <Variable x:TypeArguments="x:String" Name="arrival_time_info" />
+      <Variable x:TypeArguments="x:String" Name="departure_location_info" />
+      <Variable x:TypeArguments="x:String" Name="arrival_location_info" />
+      <Variable x:TypeArguments="x:String" Name="cost_info" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new list(of String)]" Name="compiled_information" />
+      <Variable x:TypeArguments="x:String" Name="email_body" />
+      <Variable x:TypeArguments="x:String" Name="in_email" />
+      <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="enumerableEmail" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke the 'UserForm' workflow, where the user inputs the flight details&#xA;" DisplayName="UserForm.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="588,170" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="UserForm.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="formattedDate">[in_formattedDate]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="chosen_departure">[in_chosen_departure]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="chosen_arrival">[in_chosen_arrival]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="email">[in_email]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Input User form infroamtion to expedia" sap:VirtualizedContainerService.HintSize="588,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="40d4b6d7-172d-4d4b-81db-d7f36a717638" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="do" sap:VirtualizedContainerService.HintSize="512,435" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap2010:Annotation.AnnotationText="Inputs the user infromation into the Expedia flights page&#xA;" DisplayName="Input flight details" sap:VirtualizedContainerService.HintSize="450,123" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'One-way'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="40d4b6d7-172d-4d4b-81db-d7f36a717638" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.expedia.com/Flights?locale=en_US&amp;siteid=1&amp;semcid=US.MULTILOBF.BING.GT-c-EN.FLIGHT&amp;semdtl=a1414811421.b11320514853560535.g1kwd-82532913266590:loc-190.e1c.m1064c0e3de91716139ff66b3a6d73fc44.r1695242e75529a8dcd7f221254e80aadba329b343177f2201651ad4e3e30a4170.c1R6SwFU6xVeYDKbn3LQvUPw.j194553.k1.d182532398133510.h1e.i1.l1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&amp;msclkid=064c0e3de91716139ff66b3a6d73fc44" CvTextArea="501, 254, 62, 16" CvTextArgument="One-way" CvType="Text" DesignTimeRectangle="486, 243, 92, 36" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'One-way'" FullSelectorArgument="&lt;webctrl aaname='One-way' aria-role='tab' tag='*' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='One-way' aria-role='tab' tag='*' type='' class='uitk-tab-anchor' check:text='One-way' /&gt;" Guid="63decff0-1123-48a9-be0f-6ee262339126" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAoCAYAAAABk/85AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQBSURBVGhD7ZhPSxtBGIf7NXLxK+SQg4eC4CG0h4qXPdUQsB7EICKyUEgvsSBVqGBJIcGCCR4CHhICISBRaDGwBwlCWYQqQggFoYUclnhY8fDrO3822dQmFjoyFOaBkOzsZnYzz8zvHX0Cg1aMAM0YAZoxAjRjBGjGCNCMEaAZI0AzRoBmjADNGAGaMQI0YwRoxgjQjBGgGfUC7rpoFjJYmH2GyMRTROPzWMs76HjyvGEItQJuXOzMPuUDP5nMYDOfRfrVDKJ0HJlKo/5dXmfoo1BAF/XVaRr8l9g57ck2gfetjFSMJMwW4co2g0CdgPMi4jTTE6W2bBjGO0yTnGlsOrf82C3Mw5rLolR9B4vJmXiGxMYXdPhZgXdaRCrOpLIos5E77cozo+jieIP6tWuDfto1rM2lUek/Fk2UN3TNewc+HflXNawnRVxGphaxXm1T+y3cfZuebxctdpHE+7xNbRnUr2WDApQJ+FG16UfMY8T4Az8bSLGB/CjWQOuDiKroqywqnxvYs1/y47VDsXr8r7t4QcISHxtwzy9Qz69gcsLC5qkQOArvKEP9LPafo1Oa5/1aQcN1DQt0vH5C/fgtbJL86GoRTbpHs2BTXFrIndN17TKs0PMAPdRtema7AZXlTLGAFVRG5bz3BWn6QZEPYQFUF/qTmuoHWwn8fA/Hb+jzchmXXg8ef12j8pralmr4wS7vttF0WqFXWwyM72Cd7pM4YNO0jdIcfU4uIvJcxF/ngD7HttEMZvZNF94Nvft0D4pKJmehyh7qGqUk3S8YcBKSoHPpo+F4/VfURdBZlhfbwYwZxne2+fngBwgBWbT4EaOLylIgQMqg6++/5Hfofn9sp/hoblFsJcvo8FjM4PiqgTU+s8WgRrdaPH7Yte5BBompcD+BgCA2xWpyP1nD4hShsAhfIMd2QDH7/irwWmJ3FPoB4wWwgk6ff1/ud/L9IfhkWERqlQZtg2W9WFHxVZtmsYwYBsVclGIuVabVw55LxlMgIIgoa7+G3HP6fv5CtCtEoQDie03sdmIzSG2UUXccVPIZWWRpd3Q2yO/xAkSW88EpuPQ3RA8dZxeJGB1X/6YC0mSgAQsXfVEbqE1GEcM/2aY2qisnFEMUccdbog71BRBuniTylTGoKypRK4DRbSG3LPf+/DWNqeUs6lfDxfMhASweLvs7JNGP9XZ4lzQOPnDhyJC1If4pNIv9C+wtyR0Q7cIWCkVep8ICguxXXXwD1AsIuLsVxfOfM1NVP6Pxx/XP68hgJanm8QT87/BdVgM7bCfECrpsVo0RMIpgl/XI/0IxAsbhP07shDECNGMEaMYI0IwRoBkjQDNGgGaMAM0YAZoxAjRjBGjGCNAK8AtUmxf/0DmLngAAAABJRU5ErkJggg==" InformativeScreenshot="3fce6bf9c23cc97e6dea58ee26434aa9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Discover Cheap Flights' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="633, 254, 64, 16" CvTextArgument="Multi-city" CvType="Text" DesignTimeRectangle="618, 243, 95, 36" ElementType="Text" FriendlyName="'Multi-city'" FullSelectorArgument="&lt;webctrl aaname='Multi-city' idx='*' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Multi-city' tag='A' type='' class='uitk-tab-anchor' check:text='Multi-city' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAoCAYAAADqpEQ6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPMSURBVGhD7ZjBS2JBHMf33/Cy/0KHjoLgIeqw0EVY2CQID2FEhHiyiwZLCRsoLSgF1UnxoASuEK2gbODpEYgE6+kRC4KBB7GD0uG7v3kzL5+i9crn7hzmA6Izb96befP5zW+mPkAhDUqGRCgZEqFkSISSIRFKhkQoGRKhZEiEkiERSoZEKBkSoWRIhJIhEUqGRCgZEuGgjAbO1jbgW4ui1BJV4+hFhFib/Sraouo1GufsmVl6+hT6TZyFNxDK6aLiHbSqiAV3kKj1RMX/wVEZiY9uuOizlG6KOisD3MS9xnVXsGhbhpZkzzyGZpQ6KO+TnHOLmm4VkUU3FuIa+qLqzfzO4hONy58TUVTPUgAcoPzAi/+KuchwLUZR7ohqk841Qub1GWQUglROjq2TJ/E9C9Zn3B5Tn2EUpq3wOeG8jGAYAfp+jjJBI+0jSUc4/GqVwVNb7KfFnBGVGzir8+JQBl8VHloFLs8Xow2/T6RH62qZxlML5WSYP+OjF57tIu5Z/QOlKfN5rP/VZX79s0iRHX49lLe+k45McAP+Uxv92sR5GckaT0c08Tdm3nisIUYT4M/ofHItMtg9gUuLDCMq3Ujc8uJQRg9a7ghbK1RejyKVPkHmluV4s9/XJqWD0i5Lk8sIJIsoV4pIbF/Q3USraASQMQ69itTeJrXzYSt+Qv1USRilWBZEK6I94+4CS9QmdSfKDjAHGTRcPQ8//Q5d8Q3xPsdeLoISvev7ZTAmpakxGR0dNzXN8tHRZfXG5FFfI9EtsMpgTEhT/doRFp4nX+x/VjkOMB8ZFMXlPTHYR6qnaDY39bnLEPcPP/ze9o8w/Z6yD9iQATSRovcwDgrs0EDtx1PxrMxJBmFEohdbu6OTMEnG0unw9NW+ZO1fkfGNlzhj/U6jfkKR7UakMhAVFibK2EHhDy+a8BV+hEI+Qt98pTvJ/GSYE0d11mPnqIwWMutUXtxE4opSSuUCW8bmOl1GaZfKK1FkKho0/S17BkX2Ku/r8JL2tVoNhXie7ibGZQhx/uQ1jakpxkpYToQzHaWnMEcZZp7dBO3bz4zKoDZ3WQQ8/AVdnh2cpQ9ekEHtb0/gE8L45NmVQXQ0pILspGT2N2EDN2ihFDbbDfse/q3k7MZt4qCMWRig2+3Zj7Qn1n5CurHLY8/W/X0aU3dkUD2SRILW8/xI7DCSyJCdAdp1DeVM1NgHY79mCIQXUDJsYe5/Xvi+NxzfK0yUDNsM0Hfi3y4voGRIhJIhEUqGRCgZEqFkSISSIRFKhkQoGRKhZEiEkiERSoY0AH8BNG+7JQs2hfkAAAAASUVORK5CYII=" SearchSteps="Selector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'enter departing city'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="40d4b6d7-172d-4d4b-81db-d7f36a717638" Text="[in_chosen_departure + &quot;[k(Enter)]&quot;]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.expedia.com/Flights?locale=en_US&amp;siteid=1&amp;semcid=US.MULTILOBF.BING.GT-c-EN.FLIGHT&amp;semdtl=a1414811421.b11320514853560535.g1kwd-82532913266590:loc-190.e1c.m1064c0e3de91716139ff66b3a6d73fc44.r1695242e75529a8dcd7f221254e80aadba329b343177f2201651ad4e3e30a4170.c1R6SwFU6xVeYDKbn3LQvUPw.j194553.k1.d182532398133510.h1e.i1.l1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&amp;msclkid=064c0e3de91716139ff66b3a6d73fc44" CvElementArea="332, 305, 395, 50" CvTextArea="376, 323, 95, 17" CvTextArgument="Leaving from" CvType="InputBox" DesignTimeRectangle="333, 307, 392, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl aria-label='Leaving from' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Leaving from' tag='BUTTON' type='button' class='uitk-fake-input uitk-form-field-trigger' aaname='' /&gt;" Guid="4fdfb729-2d02-4871-b6b6-46af80babf7f" ImageBase64="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" InformativeScreenshot="f4a71f32b751d1054c98a9c68ddc7dc8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Discover Cheap Flights' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'enter arriving city'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="40d4b6d7-172d-4d4b-81db-d7f36a717638" Text="[in_chosen_arrival + &quot;[k(Enter)]&quot;]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.expedia.com/Flights?locale=en_US&amp;siteid=1&amp;semcid=US.MULTILOBF.BING.GT-c-EN.FLIGHT&amp;semdtl=a1414811421.b11320514853560535.g1kwd-82532913266590:loc-190.e1c.m1064c0e3de91716139ff66b3a6d73fc44.r1695242e75529a8dcd7f221254e80aadba329b343177f2201651ad4e3e30a4170.c1R6SwFU6xVeYDKbn3LQvUPw.j194553.k1.d182532398133510.h1e.i1.l1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&amp;msclkid=064c0e3de91716139ff66b3a6d73fc44" CvElementArea="731, 305, 399, 50" CvTextArea="780, 323, 66, 17" CvTextArgument="Going to" CvType="InputBox" DesignTimeRectangle="737, 307, 392, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl aria-label='Going to' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Going to' tag='BUTTON' type='button' class='uitk-fake-input uitk-form-field-trigger' aaname='' /&gt;" Guid="6c624e85-3f02-4494-860a-df001bc01b0d" ImageBase64="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" InformativeScreenshot="f9c0030fa721e76a137614b729d9ed82.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Discover Cheap Flights' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="633, 254, 64, 16" CvTextArgument="Multi-city" CvType="Text" DesignTimeRectangle="634, 252, 63, 18" ElementType="Text" FriendlyName="'Multi-city'" FullSelectorArgument="&lt;webctrl aaname='Multi-city' parentid='uitk-tabs-button-container' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Multi-city' parentid='uitk-tabs-button-container' tag='SPAN' type='' class='uitk-tab-text' check:innerText='Multi-city' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAWCAYAAACbiSE3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANxSURBVFhH7ZYxayJBFMfva9jkK6RIKQgWISkO0ggHFwmIRVBCCGJlGg0ciXCCkgPFgEmlWCgBTwi5BeUCVosgEjirJRwIBizEFEqK/73ZmdVZsxtNcgcH8Q/L7rx9M2/292be7AcsNdEShqQlDElLGJKWMCQtYUiSYLSR2/bBsx1FtStMs9IqCDGfozp6wjRP7XM2ZoFGt9Gog1zYh1BRE4ZXqFtHLLCPZGMoDK+TCUZyxQkHXeuZjrDJGuMm7tbfOwKVhWGoKTbmKVS91YdyRHDOJTSDOiJrTqzGVYyE6cX6VcBHmpe3KLLYKlACjqHc8+aisoThWItC6Quzof41Qsb7N8AoB6idmlknj+L+FsljNE8pZhhluxVuo6cwAmH46T6hLNTOeAhSAidfZBh8a8V+SOT0rPiQa/HmFAZfFS5aBQ7XZ92H9xPbU14tdnrsQkmF+Rgrbrj2Krhj9nvaJsZ4LP7WBn//SWzRPn8fKsnfpCEf8MF7No37FEaqwbcDffiNsW4fGojRBLx5jX+cBIP18V9KMPSsOJFs8uYUxhBqMYHgJrV3okhnssg32R434s6D0Uf1gG3TDfhTFSi1CpJ7F9Sb1K3oCdTnodWRPtwlPw+C8SzFqRMw2uIsiZvCn+n2Auvkk74VbZIFDHLXSvDSc+iKF6S7Ihs8girFej0MJqttMgOjr+GmoUqXhgGz65OnWKbsCskwmCy2yaiRwOrk40X9k+GQrGFQFpVD4fxAdsqmUVT/OQzRf3rxvr3vYXq2qQMLwAA6SNN36IWaFW3yny0FNjBIeibcCB6YJ2EFY/1sevr0Lpn/HBhfeYtrJq6dWlnKrBOR2lgYJFnC2Ef5N28a4is8gXIpQne+0mXZwzAmTjb52DPD6CK/Q+21XSSvaEnXLhDUi5s9jOoBtTejyNdUqNpLagZldovHOrmkutZooBwvUW/SLAwBzpu6pjl1xFxJ0olodZQ/A8PYZ7ugujmRGQb53Bbgd/EADtc+cpnjZ2CQfzMLjwDGJ78oDFJfRTrATgojnkUB1dVFNWz4TWNP/5XMhdOQBOMtGmMwGC7+0/TI/C2W+6J6GC7Uf0RzGpgmNSRIBGinxI/kGf0lGP+7xui1VCj5qF4HYz+tQb4TGEb9c8PzrW27gt8JDKYxRnN++98RjPlawpgI+AMCLQfDBVN15QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'departing date'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="40d4b6d7-172d-4d4b-81db-d7f36a717638" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.expedia.com/Flights?locale=en_US&amp;siteid=1&amp;semcid=US.MULTILOBF.BING.GT-c-EN.FLIGHT&amp;semdtl=a1414811421.b11320514853560535.g1kwd-82532913266590:loc-190.e1c.m1064c0e3de91716139ff66b3a6d73fc44.r1695242e75529a8dcd7f221254e80aadba329b343177f2201651ad4e3e30a4170.c1R6SwFU6xVeYDKbn3LQvUPw.j194553.k1.d182532398133510.h1e.i1.l1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&amp;msclkid=064c0e3de91716139ff66b3a6d73fc44" CvElementArea="1140, 305, 394, 51" CvType="InputBox" DesignTimeRectangle="1141, 307, 392, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Oct 1'" FullSelectorArgument="&lt;webctrl class='uitk-field has-floatedLabel-label has-icon has-placeholder' idx='*' /&gt;&lt;webctrl tag='BUTTON' aria-label='Departing*' /&gt;" FuzzySelectorArgument="&lt;webctrl class='uitk-field has-floatedLabel-label has-icon has-placeholder' /&gt;&lt;webctrl tag='BUTTON' aria-label='Departing*' type='button' class='uitk-faux-input uitk-form-field-trigger' aaname='Oct 1' check:text='Oct 1' /&gt;" Guid="18a8fcc4-af19-450b-8b23-09efbe1a241e" ImageBase64="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" InformativeScreenshot="89d372fbca4f2f55219fb408fe0cf586.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Discover Cheap Flights' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="633, 254, 64, 16" CvTextArgument="Multi-city" CvType="Text" DesignTimeRectangle="618, 243, 95, 36" ElementType="Text" FriendlyName="'Multi-city'" FullSelectorArgument="&lt;webctrl aaname='Multi-city' idx='*' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Multi-city' tag='A' type='' class='uitk-tab-anchor' check:text='Multi-city' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAoCAYAAADqpEQ6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPMSURBVGhD7ZjBS2JBHMf33/Cy/0KHjoLgIeqw0EVY2CQID2FEhHiyiwZLCRsoLSgF1UnxoASuEK2gbODpEYgE6+kRC4KBB7GD0uG7v3kzL5+i9crn7hzmA6Izb96befP5zW+mPkAhDUqGRCgZEqFkSISSIRFKhkQoGRKhZEiEkiERSoZEKBkSoWRIhJIhEUqGRCgZEuGgjAbO1jbgW4ui1BJV4+hFhFib/Sraouo1GufsmVl6+hT6TZyFNxDK6aLiHbSqiAV3kKj1RMX/wVEZiY9uuOizlG6KOisD3MS9xnVXsGhbhpZkzzyGZpQ6KO+TnHOLmm4VkUU3FuIa+qLqzfzO4hONy58TUVTPUgAcoPzAi/+KuchwLUZR7ohqk841Qub1GWQUglROjq2TJ/E9C9Zn3B5Tn2EUpq3wOeG8jGAYAfp+jjJBI+0jSUc4/GqVwVNb7KfFnBGVGzir8+JQBl8VHloFLs8Xow2/T6RH62qZxlML5WSYP+OjF57tIu5Z/QOlKfN5rP/VZX79s0iRHX49lLe+k45McAP+Uxv92sR5GckaT0c08Tdm3nisIUYT4M/ofHItMtg9gUuLDCMq3Ujc8uJQRg9a7ghbK1RejyKVPkHmluV4s9/XJqWD0i5Lk8sIJIsoV4pIbF/Q3USraASQMQ69itTeJrXzYSt+Qv1USRilWBZEK6I94+4CS9QmdSfKDjAHGTRcPQ8//Q5d8Q3xPsdeLoISvev7ZTAmpakxGR0dNzXN8tHRZfXG5FFfI9EtsMpgTEhT/doRFp4nX+x/VjkOMB8ZFMXlPTHYR6qnaDY39bnLEPcPP/ze9o8w/Z6yD9iQATSRovcwDgrs0EDtx1PxrMxJBmFEohdbu6OTMEnG0unw9NW+ZO1fkfGNlzhj/U6jfkKR7UakMhAVFibK2EHhDy+a8BV+hEI+Qt98pTvJ/GSYE0d11mPnqIwWMutUXtxE4opSSuUCW8bmOl1GaZfKK1FkKho0/S17BkX2Ku/r8JL2tVoNhXie7ibGZQhx/uQ1jakpxkpYToQzHaWnMEcZZp7dBO3bz4zKoDZ3WQQ8/AVdnh2cpQ9ekEHtb0/gE8L45NmVQXQ0pILspGT2N2EDN2ihFDbbDfse/q3k7MZt4qCMWRig2+3Zj7Qn1n5CurHLY8/W/X0aU3dkUD2SRILW8/xI7DCSyJCdAdp1DeVM1NgHY79mCIQXUDJsYe5/Xvi+NxzfK0yUDNsM0Hfi3y4voGRIhJIhEUqGRCgZEqFkSISSIRFKhkQoGRKhZEiEkiERSoY0AH8BNG+7JQs2hfkAAAAASUVORK5CYII=" SearchSteps="Selector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'input users chosen date'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="40d4b6d7-172d-4d4b-81db-d7f36a717638" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.expedia.com/Flights?locale=en_US&amp;siteid=1&amp;semcid=US.MULTILOBF.BING.GT-c-EN.FLIGHT&amp;semdtl=a1414811421.b11320514853560535.g1kwd-82532913266590:loc-190.e1c.m1064c0e3de91716139ff66b3a6d73fc44.r1695242e75529a8dcd7f221254e80aadba329b343177f2201651ad4e3e30a4170.c1R6SwFU6xVeYDKbn3LQvUPw.j194553.k1.d182532398133510.h1e.i1.l1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&amp;msclkid=064c0e3de91716139ff66b3a6d73fc44" CvTextArea="1375, 467, 10, 12" CvTextArgument="6" CvType="Text" DesignTimeRectangle="475, 91, 132, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'More travelMore travel'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aria-label='{0}' tableRow='*' tag='BUTTON' /&gt;&quot;, in_formattedDate)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aria-label='{0}' type='button' tag='BUTTON' class='uitk-button uitk-button-large uitk-button-has-text uitk-button-tertiary uitk-menu-trigger global-navigation-nav-button' aaname='More travel' check:text='More travelMore travel' /&gt;&quot;, in_formattedDate)]" Guid="ddc9f363-2b8d-4497-8b7e-f609bacd4da2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAA0CAYAAABRsnBcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAShSURBVHhe7ZfBS1tZFIfn3+jGfyELFy4GCi5EF5bZBAo1CK2UoJQincCAi8EUQhWUUSokWEZDF+k4EBGcgERBQSaLIRSGRxaWQnAEIYUsgi5e6OLMOe/emPdiPAo+Q6W/Dx7Ju/e9m/Pu/d45Nz8QAAoQBKhAEKACQYAKBAEqEASoQBCgAkGACgQBKhAEqEAQoAJBgAoEASoQBKhAEKACQYAKBAEqEASoQBCgAkGACgQBKiEKUqe9108pOvaS0v82bVsHbpmWxuSaD+TYpu+CLweU5OdO7tZtw/0hVEE2J3+kB318JIrUsK1+jjfipr/vLZVtWy9w1lnK1wdUs+c953SbJvi5J7YgiBXgCaUrtvmCI0qPtPp7K0h5mX9zcvveCvLHnwX77TJaXxiEL8hYgiZYhMh8mVzbIzR2ZliMOM3NJy4JUitlaWpo0JMnMhSn5Fa1fW8rPecPaO3FI4q0FrpeprSci3D9j2gqU+6atSR7jD4010SlvK2b4uZllbEsFXYXKcb9Sx+58bxKm6k4DXgSD1MstU2fzrm9bmJ4lT/17vWw5XLq/ZE51+K5hSB/lz5687Lw2++2pc30zymv778TX1whE74gvICHXimJU65qu6hKuXFe/FSJPm0FBan9lfAmdWDyLW3uF2ntl6feeax1s51cmYiB8Vma23Co4Tq09BOP92yVCpUjcnayNMGLPLQQlFI43l2lGf7tByMJmsusUnrXTKaXVWRcWczUKu1Vm3Q4z5L2J2itxGOKtP085jsRwPaNZC/2Ti3hvTCvi+eWGUTk6JSkJcf9yyDyhp+XKCmTmzFvl1ta5EWPemWnFhDElp3AnoUXIyULtUiHMrstQXjcY3MBNXZneYwE5T6fUaNhjuMt07bZ5WXqVmKMIFGa+8e3of7apFpdzps85hHlnvvuq2RpqG/QZBo6o0KiHfe18dxSEMEvSa/kEO5GED5z3j3hh5ihQt2228kMCPKlSFNdJs7df6NOrrNiylG3wyxgkKsFCZY6t5LnbDMcHPPivlOTBaV0VvMUY1nmSkaua+MJQRChJYkcvZBDuDNBqF6kV/wgsekEv3lRnigzmcEMwqmZM42UHn9pcDJRvmaW9sSoLpMrZcnIZxuEr/azC54Mz9sZSLgsiI1lmvcdDYm143kYE/ssJVMcn6/cXBtPSIIIIkmv5BDuThBO0+VlWWhuG89fLE5QEN4j5GS/MkixlSIdlspUyLz0NomjK87V9Zs3jTPeYmapfMIp/YQ3jM8GKfKiGMgSLcwbHqelnTLtVcw4lwRxuSzy7wwtlKgmJWJ/kUYldn/msdLLM8U2fLXsunhCFKTX3KEgTEcqFjoFkXrurCfoIU+wSZ/DNHGDfwDu521KPm6n9sjjN7R3Yjs7OeGFlX8ycu2yee8vZ5AmOe+NnHLdwOQHSv/K3/3P09qsdmYLRo0HgoSBbAzPyFVKRTdcb1PYFvBq7Pj27Ercm47XnZvHcz/4hgQB3yIQBKhAEKACQYAKBAEqEASoQBCgAkGACgQBKhAEqEAQoAJBgAoEASoQBKhAEKACQYAKBAEqEASoQBCgAkGAAtH/rje0aqjUoqkAAAAASUVORK5CYII=" InformativeScreenshot="31e13f56cf55fee9d58d1581b1356afd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Discover Cheap Flights' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Done on calander'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="40d4b6d7-172d-4d4b-81db-d7f36a717638" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.expedia.com/Flights?locale=en_US&amp;siteid=1&amp;semcid=US.MULTILOBF.BING.GT-c-EN.FLIGHT&amp;semdtl=a1414811421.b11320514853560535.g1kwd-82532913266590:loc-190.e1c.m1064c0e3de91716139ff66b3a6d73fc44.r1695242e75529a8dcd7f221254e80aadba329b343177f2201651ad4e3e30a4170.c1R6SwFU6xVeYDKbn3LQvUPw.j194553.k1.d182532398133510.h1e.i1.l1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&amp;msclkid=064c0e3de91716139ff66b3a6d73fc44" CvElementArea="1773, 738, 77, 39" CvTextArea="1791, 750, 42, 14" CvTextArgument="Done" CvType="Button" DesignTimeRectangle="8, 79, 0, 0" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Done'" FullSelectorArgument="&lt;webctrl aaname='Done' idx='*' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Done' tag='BUTTON' type='button' class='uitk-button uitk-button-large uitk-button-fullWidth uitk-button-has-text uitk-button-primary uitk-button-floating-full-width' check:text='Done' /&gt;" Guid="4d714e3d-9ee7-4047-9dbb-d71344d03d28" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAgSURBVBhXYwCC/yD8/ft3MIYL7N+/H4zhAjCAJvD/PwCanCYpUErc4QAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Discover Cheap Flights' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="40d4b6d7-172d-4d4b-81db-d7f36a717638" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.expedia.com/Flights?locale=en_US&amp;siteid=1&amp;semcid=US.MULTILOBF.BING.GT-c-EN.FLIGHT&amp;semdtl=a1414811421.b11320514853560535.g1kwd-82532913266590:loc-190.e1c.m1064c0e3de91716139ff66b3a6d73fc44.r1695242e75529a8dcd7f221254e80aadba329b343177f2201651ad4e3e30a4170.c1R6SwFU6xVeYDKbn3LQvUPw.j194553.k1.d182532398133510.h1e.i1.l1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&amp;msclkid=064c0e3de91716139ff66b3a6d73fc44" CvElementArea="330, 431, 196, 52" CvTextArea="401, 448, 53, 16" CvTextArgument="Search" CvType="Button" DesignTimeRectangle="333, 433, 190, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Search' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Search' type='submit' class='uitk-button uitk-button-large uitk-button-fullWidth uitk-button-has-text uitk-button-primary' check:text='Search' /&gt;" Guid="0796244c-78f6-47ea-a609-838be71d24b7" ImageBase64="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" InformativeScreenshot="aa27912264b70b4c7f41e097a1e82425.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Discover Cheap Flights' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="364, 254, 66, 16" CvTextArgument="Roundtrip" CvType="Text" DesignTimeRectangle="349, 243, 97, 36" ElementType="Text" FriendlyName="'Roundtrip'" FullSelectorArgument="&lt;webctrl aria-role='tab' tag='*' aaname='Roundtrip' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='tab' tag='*' aaname='Roundtrip' type='' class='uitk-tab-anchor' check:text='Roundtrip' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAoCAYAAADnujR9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPXSURBVHhe7ZbPS6JBGMf33+jSv+ChQwdB6BB1KPYSLLQR7EqIsSxLCAstyBpEdQiKAqUFlT0Ye1ACC8JeWFnBwyJBvHgoghAhMOggeig6fPeZH76+mZWyrznLzgekZub1mfH5vPPMvIJGObQUBdFSFERLURAtRUG0FAXRUhRES1EQLUVBtBQF0VIUREtREC1FQbQUBdFSFMRBKdcwlt5h6m3j8xGLkQzOqnK4b8h1LWVRkT2dcQvz+yKmAkmcyZ6XwlEpKb8bA0OTlhjPEGt/hXEtH+kLcl3+tCXFjHUiqQYjOELrX0fuRna9EM5Lsf14FOMYHXRjfr+fVh6uq7DZss6nuJN/X5DeSimn4SUp3j0p5e4auUhA7KDBEXjeryN1fivGiMrRCu2wXZiyzWLeKz1XWYRoBy7G0gj7xyiGG67RAKLFZgzUL5Ba9mGYxtiunY9lEJ1rrovtkgmPGOM7OsZmMxFl/3/LwODf3UJBPttcT+OZLHKbtviRApyu0M5LmaMaXK2hVMwjEZymxE0jXBTjB5+oHAyOwbuZhnG4i4U3rO1D4oIHQGUvQG2REEGL6EshmcVcoGQbe1uYYYLH4zJxjTnEeM6aoxmjdLSDxVn2nQBWIzsIH11Sr4kNHldIDkWyKFEv31HWeprPDPu3kPqZR2rNBxe1JzZNOFnhnJciF84/no8I/5a7RJayhcOaaDPqeYQoqa61Av9RnUoZjZzyUYb4TgAplls5h7UzGfUCVsdtMYiH5UsmfJzmrssuoq0U+h4T1sCMTNEzdG46uF16s1PO05hnyV7OW29QZd+WPItbOkybCepUyr2kH29ZcdvP8VDCo1LojbfTToo32RKcz+/GxrFsO0DPzpQSJdhF54Z1yJ/s8Hbol63+4xRh9hZ/yfK6LKTY3zpKBCtPHUppP8cFnQW2GARP9pz9je9cykAgc+8MKSV8fP6DK9nhAD086GV9H6KElVn7AglWy4d82DgsIJfPyMN6GhsnIok3+XVRo4NJGPkC1Wx2JtliPieFSX7dmMNE4bhxrtnXRendFmcZW4dRZLG6kELSZ7YzFNuE8WMFE9Tnki+VU/RQCiHPjAF/EiV2tazSDebDJE/8gzOHc8lvW2J8hG5dcazabk7PSyHKdEObFTeztjEY5QwW2A2MPcNFdCElGEdU3vz4DfIzlWvbOeQEDkrpgpsaqlV7iWmhTuN/+UNv6AZYffJKdEtrqHVxa2oR58AaH6M/Uv5J2u+mXqCldIyW8l+jpSiIlqIgWoqCaCkKoqUoiJaiIFqKgmgpCqKlKIiWoiBainIAfwBqUMq73VLDmgAAAABJRU5ErkJggg==" SearchSteps="Selector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+            </Sequence>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Flight Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='button' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NExtractData_4" LimitExtractionTo="Rows" MaximumResults="5" ScopeIdentifier="40d4b6d7-172d-4d4b-81db-d7f36a717638" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="607, 231, 986, 3807" DesignTimeScaleFactor="1.100000023841858" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl aria-role='list' tag='UL' /&gt;" Guid="032ce43d-ba30-4e04-830a-8d5ea31e26c4" InformativeScreenshot="3e65585ae2d6681b339c50efb0f37fc1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ATL to HOU flights' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGsSURBVDhPpZPNLgNRHMU9QSMhGl87tIhK7kyqM7NBqI+FsGms2HkBL1BrXoEHsPWVSBASy6JE4nvBgoikFUKQzvE/V6etpJ1ILE5m7v3f85tz7/1PVe5SBURzokcR/iiupSdAAF/eRbqIa3+5VwUIPUkCHjjhij7PFc63DBytm0iXEedv9w0PQN0T4HLweaawOB9FV8RGS8hBa7iotnYb4Q5bP0fiFu4Egp8kOQJ0tNSKicSEhaEBC8ODRY0OWYh02wg2Owg2OQgJ5HjD1B5+XAOot1OF7JGB57Qq6PVEYW/ZhG3ZqGsUgEDCnRUAFA/IE24UDtdM9PdaqG1wNKRLkoRkKxUBnlg8WDXRJ+aaekdDdiUJ988z8QXw66VmPpnkRbbDM/EF0PwhtzE9GUN13Y+ZMG4nK2fiC/iSHsgcGnhKGUjO9miINstCgn0BHFzuGBgbtTAzFdMQJqGRdQ8QlyvmlV5sSx+UAFwOTjdNKMPWECbxzB4gI1ecGLewtBDVafM13Ui6ldkHhDBJyYKCWGez6WTFed3KhZ+JSfLRysr9XaNnjoB//M4q8A3mjqnICHwMtAAAAABJRU5ErkJggg==" InformativeScreenshot="4d7104d1975cddd89a486e8edadc87be.jpg" Selector="&lt;html app='msedge.exe' title='Discover Cheap Flights' /&gt;" Title="Google Flights" Url="https://www.expedia.com/Flights?locale=en_US&amp;siteid=1&amp;semcid=US.MULTILOBF.BING.GT-c-EN.FLIGHT&amp;semdtl=a1414811421.b11320514853560535.g1kwd-82532913266590:loc-190.e1c.m1064c0e3de91716139ff66b3a6d73fc44.r1695242e75529a8dcd7f221254e80aadba329b343177f2201651ad4e3e30a4170.c1R6SwFU6xVeYDKbn3LQvUPw.j194553.k1.d182532398133510.h1e.i1.l1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&amp;msclkid=064c0e3de91716139ff66b3a6d73fc44" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <Sequence sap2010:Annotation.AnnotationText="Loops through each row of the data table that was extracted.&#xA;Converts each row to String.&#xA;Uses RegEx's to retrieve the desired info from each row. &#xA;Assigns the required values.&#xA;Adds all of the values to a collection.&#xA;Formats the collection to be added to the email body.&#xA;" DisplayName="Formatting extracted data" sap:VirtualizedContainerService.HintSize="588,2014" sap2010:WorkflowViewState.IdRef="Sequence_34">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Formats the extracted data into the desriable format" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="526,1622" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492,1405" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="departure_time_regex" />
+                <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="departure_location_regex" />
+                <Variable x:TypeArguments="x:String" Name="CurrentRow_ToString" />
+                <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="airline_name_regex" />
+                <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="arrival_time_regex" />
+                <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="arrival_location_regex" />
+                <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="cost_regex" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap2010:Annotation.AnnotationText="Converts the CurrentRow to a String variable to be utilized by the regEx" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[CurrentRow_ToString]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[String.Join(",", currentRow.ItemArray)]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <Sequence DisplayName="RegEx's to retrieve  information from data extract" sap:VirtualizedContainerService.HintSize="450,671" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:Matches FirstMatch="{x:Null}" BuilderPattern="for\s+(.*?)\s+flight" DisplayName="airline name" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[CurrentRow_ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;for\\s+(.*?)\\s+flight&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="for\s+(.*?)\s+flight" RegexOption="IgnoreCase, Compiled" Result="[airline_name_regex]" />
+                <ui:Matches FirstMatch="{x:Null}" BuilderPattern="departing\s+at\s+(\d{1,2}:\d{2}[ap]m)" DisplayName="departure time" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="Matches_4" Input="[CurrentRow_ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;departing\\s+at\\s+(\\d{1,2}:\\d{2}[ap]m)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="departing\s+at\s+(\d{1,2}:\d{2}[ap]m)" RegexOption="IgnoreCase, Compiled" Result="[departure_time_regex]" />
+                <ui:Matches FirstMatch="{x:Null}" BuilderPattern="arriving\s+at\s+(\d{1,2}:\d{2}[ap]m)" DisplayName="arrival time" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="Matches_5" Input="[CurrentRow_ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;arriving\\s+at\\s+(\\d{1,2}:\\d{2}[ap]m)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="arriving\s+at\s+(\d{1,2}:\d{2}[ap]m)" RegexOption="IgnoreCase, Compiled" Result="[arrival_time_regex]" />
+                <ui:Matches FirstMatch="{x:Null}" BuilderPattern="from\s+(.*?), " DisplayName="departure location" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="Matches_6" Input="[CurrentRow_ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;from\\s+(.*?), &quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="from\s+(.*?), " RegexOption="IgnoreCase, Compiled" Result="[departure_location_regex]" />
+                <ui:Matches FirstMatch="{x:Null}" BuilderPattern="in\s+(.*?), " DisplayName="arrival location" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="Matches_7" Input="[CurrentRow_ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;in\\s+(.*?), &quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="in\s+(.*?), " RegexOption="IgnoreCase, Compiled" Result="[arrival_location_regex]" />
+                <ui:Matches FirstMatch="{x:Null}" BuilderPattern="Priced\s+at\s+(\$\d+)" DisplayName="cost" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="Matches_8" Input="[CurrentRow_ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;Priced\\s+at\\s+(\\$\\d+)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="Priced\s+at\s+(\$\d+)" RegexOption="IgnoreCase, Compiled" Result="[cost_regex]" />
+              </Sequence>
+              <ui:MultipleAssign sap2010:Annotation.AnnotationText="Further formatting the RegEx's to get the specific flight intel.&#xA;- airline name&#xA;- departure time&#xA;- arrival time &#xA;etc.&#xA;Ex: the RegEx output for airline name is outputted as &quot;for Frontier Airlines flight&quot;,  airline_name_regex(0).Groups(1).Value, gives us the group 1 output: 'Frontier airlines'" DisplayName="Assign flight information" sap:VirtualizedContainerService.HintSize="450,388" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[airline_name_info]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[airline_name_regex(0).Groups(1).Value]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[departure_time_info]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[departure_time_regex(0).Groups(1).Value]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[arrival_time_info]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[arrival_time_regex(0).Groups(1).Value]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[departure_location_info]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[departure_location_regex(0).Groups(1).Value]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[arrival_location_info]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[arrival_location_regex(0).Groups(1).Value]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[cost_info]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[cost_regex(0).Groups(1).Value]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MultipleAssign>
+              <AddToCollection x:TypeArguments="x:String" Collection="[compiled_information]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="AddToCollection`1_4" Item="[&quot;Airline name: &quot; &amp; airline_name_info &amp; vbNewLine &amp; _&#xA;&quot;Departure time: &quot; &amp; departure_time_info &amp; vbNewLine &amp; _&#xA;&quot;Arrival time: &quot; &amp; arrival_time_info &amp; vbNewLine &amp; _&#xA;&quot;departure location: &quot; &amp; departure_location_info &amp; vbNewLine &amp; _&#xA;&quot;arrival location: &quot; &amp; arrival_location_info &amp; vbNewLine &amp; _&#xA;&quot;cost: &quot; &amp; cost_info &amp; vbNewLine &amp; vbNewLine]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachRow>
+      <Assign sap2010:Annotation.AnnotationText="joins the strings from compiled_information list by adding a new line for each flight individual flight catalog." sap:VirtualizedContainerService.HintSize="526,124" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[email_body]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[String.Join(Environment.NewLine, compiled_information)]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+    </Sequence>
+    <Assign sap2010:Annotation.AnnotationText="in_email contains our user email from the UserForm, of type String. This way the email address is dynamic.&#xA;When sending the email to the desired recipient, the email needs to be of type IEnumerable(Of String). So we convert the value and store it in enumerableEmail." sap:VirtualizedContainerService.HintSize="588,169" sap2010:WorkflowViewState.IdRef="Assign_12">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:IEnumerable(x:String)">[enumerableEmail]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String) From {in_email}]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="myuipathmailbox@gmail.com" DisplayName="Use Gmail" EmailAddress="myuipathmailbox@gmail.com" sap:VirtualizedContainerService.HintSize="588,671" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+      <umab:GmailApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,491" sap2010:WorkflowViewState.IdRef="Sequence_37">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[email_body]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,380" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot;Here Are Your Top 5 Flights From &quot; + in_chosen_departure +&quot; To &quot;+ in_chosen_arrival]" To="[in_email]" UseDocumentAsBody="False">
+              <umab:SendMailX.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+              </umab:SendMailX.Files>
+              <umab:SendMailX.HtmlBodyFromFile>
+                <umabh:HtmlContentArgument FilePath=".data/HtmlContent1.html">
+                  <umabh:HtmlContentArgument.RuntimeImages>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </umabh:HtmlContentArgument.RuntimeImages>
+                  <umabh:HtmlContentArgument.ValueMappings>
+                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                      <umabh:HtmlTextValueMapping Name="body" Value="[enumerableEmail]" />
+                    </scg:List>
+                  </umabh:HtmlContentArgument.ValueMappings>
+                </umabh:HtmlContentArgument>
+              </umab:SendMailX.HtmlBodyFromFile>
+            </umab:SendMailX>
+          </Sequence>
+        </ActivityAction>
+      </umab:GmailApplicationCard.Body>
+      <umab:GmailApplicationCard.ClientId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:GmailApplicationCard.ClientId>
+      <umab:GmailApplicationCard.ClientSecret>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:GmailApplicationCard.ClientSecret>
+    </umab:GmailApplicationCard>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="588,90" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Email has been sent to: &quot; + in_email]" />
+  </Sequence>
+</Activity>
